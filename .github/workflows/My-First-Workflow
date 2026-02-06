@@ -1,0 +1,17 @@
+name: My first workflow
+
+on: [push]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: first-step
+       run: echo step1
+
+      - name: second-step
+       uses: actions/checkout@v3
+
+      - name: third-step
+       run: ls -la
